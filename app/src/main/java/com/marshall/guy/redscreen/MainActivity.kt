@@ -14,6 +14,11 @@ import com.marshall.guy.redscreen.ui.theme.RedScreenTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val layoutParams = window.attributes
+        layoutParams.screenBrightness = 1.0f
+        window.attributes = layoutParams
+
         enableEdgeToEdge()
         setContent {
             RedScreenTheme {
